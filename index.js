@@ -46,6 +46,10 @@ async function executarApp() {
         // ======================================
         // DELETE (Remover registros)
         // ======================================
+        await Aluno.destroy({
+            where: { matricula: '202789' }
+        });
+        console.log('Registro deletado');
 
     } catch (error) {
         console.error('Erro de conexão ou execução: ', error);
